@@ -1,0 +1,48 @@
+$fontcolor: #FFF;
+$bgfcolor: #0b0b0bd0;
+
+@mixin link {
+    color: $fontcolor;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 2px;
+}
+
+body {
+    background-color: #2B2B2B;
+    font-family: sans-serif;
+}
+
+.footer {
+    text-align: center;
+    color: $fontcolor;
+    padding: 3em;
+    outline: 10px solid $bgfcolor;
+    background-color: $bgfcolor;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+
+    .footer-head {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .footer-container {
+        display: grid;
+    }
+
+    .span {
+        font-size: 24px
+    }
+
+    a {
+        @include link();
+        transition: 0.4s ease-in-out;
+    }
+
+    a:hover {
+        @include link();
+        text-shadow: 0 0 5px $fontcolor;
+    }
+}
